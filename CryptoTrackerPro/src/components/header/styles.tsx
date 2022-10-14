@@ -11,8 +11,8 @@ export const Container = styled.View`
 export const Title = styled.Text`
 left:5%
  color: white;
- fontSize:25px;
- top:35%;
+ fontSize:30px;
+ top:45%;
 `;
 
 export const Profile = styled.Image`

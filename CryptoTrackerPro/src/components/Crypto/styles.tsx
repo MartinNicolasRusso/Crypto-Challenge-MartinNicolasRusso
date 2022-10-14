@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const CryptoContainer = styled.View`
-    width: 90%;
-    left:5%;
+    alignSelf:center;
     height: 100px;
+    width: 85%;
     marginBottom: 10px;
     borderBottomColor: #C6C8D9;
     borderBottomWidth:1px
@@ -13,8 +13,7 @@ export const NameContainer = styled.View`
     width: 25%;
     position: relative;
     left: 22%;
-    top: 30%;
-    
+    top: 20%;
 `
 export const Name = styled.Text`
   color: black;
@@ -31,11 +30,12 @@ export const Slug = styled.Text`
 `;
 
 export const Logo = styled.Image`
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   position:relative;
-  left: 30px;
-  top: 40px;
+  left: 5%;
+  right:5%
+  top: 37%;
 `;
 
 export const Price = styled.Text`

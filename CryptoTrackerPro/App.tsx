@@ -8,17 +8,10 @@
  * @format
  */
 
-import React, {type PropsWithChildren} from 'react';
-import CryptoList from './src/containers/CryptoList';
-import {NavigationContainer} from '@react-navigation/native';
+import React  from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Header from './src/components/header';
 import Home from './src/screens/HomeScreen';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-} from 'react-native';
+
 
 const Stack = createNativeStackNavigator();
 
