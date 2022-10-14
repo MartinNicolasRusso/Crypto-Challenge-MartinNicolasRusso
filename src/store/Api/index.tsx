@@ -1,4 +1,3 @@
-
 import {CryptoTypes} from '../../types/index';
 
 const ApiCryptos: CryptoTypes[] = [
