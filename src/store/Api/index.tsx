@@ -6,7 +6,7 @@ const ApiCryptos: CryptoTypes[] = [
     slug: 'BCT',
     name: 'Bitcoin',
     price: '1.234',
-    market_porcentage: '2.0',
+    market_porcentage: '-2.0',
     image: require('../../assets/Bitcoin.png'),
   },
   {
