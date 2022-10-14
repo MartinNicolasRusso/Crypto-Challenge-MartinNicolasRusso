@@ -19,12 +19,12 @@ const ApiCryptos: CryptoTypes[] = [
     image: require('../../assets/Ethereum.png'),
   },
   {
-    id: 'USDT',
-    slug: 'USDT',
-    name: 'Tether',
+    id: 'HDE',
+    slug: 'HDE',
+    name: 'Heydoge',
     price: '1.902',
     market_porcentage: '3.4',
-    image: require('../../assets/USDT.png'),
+    image: require('../../assets/Dogecoin.png'),
   },
 ];
 
