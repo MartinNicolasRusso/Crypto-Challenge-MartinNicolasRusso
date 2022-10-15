@@ -1,17 +1,21 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
+import {FlatList, SafeAreaView} from 'react-native';
 import Crypto from '../../components/Crypto';
 import ApiCryptos from '../../store/Api';
+import { CryptoTypes } from '../../types';
 import {Button} from './styles';
 
-const CryptoList = () => (
+const CryptoList = () => {
+const renderItem = ({item}) => <Crypto item={item} />;
+return(
   <SafeAreaView>
-    {ApiCryptos &&
-      ApiCryptos.map(c => {
-        return <Crypto key={c.id} {...c} />;
-      })}
+    <FlatList
+    data={ApiCryptos}
+    keyExtractor={item => item.id}
+    renderItem={renderItem}
+    />
     <Button>+ Add Cryptocurrency</Button>
   </SafeAreaView>
-);
-
+)
+}
 export default CryptoList;

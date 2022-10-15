@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import theme from '../../utils/themes/themes';
 
 export const Button = styled.Text`
-  color: blue;
-  fontsize: 17px;
+  color: ${theme.colors.blue};
+  font-size: 17px;
   left: 30%;
 `;

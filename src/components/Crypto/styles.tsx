@@ -1,12 +1,13 @@
 import styled from 'styled-components';
+import theme from '../../utils/themes/themes';
 
 export const CryptoContainer = styled.View`
-  alignself: center;
   height: 100px;
   width: 85%;
-  marginbottom: 10px;
-  borderbottomcolor: #c6c8d9;
-  borderbottomwidth: 1px;
+  left: 7%;
+  margin-bottom: 10px;
+  border-bottom-color: ${theme.colors.lightgrey};
+  border-bottom-width: 1px;
 `;
 
 export const NameContainer = styled.View`
@@ -17,65 +18,55 @@ export const NameContainer = styled.View`
 `;
 
 export const Name = styled.Text`
-  color: black;
-  fontsize: 20px;
+  color: ${theme.colors.black};
+  font-size: 16px;
   position: relative;
   bottom: 35px;
+  font-weight: bold;
 `;
 
 export const Slug = styled.Text`
-  color: gray;
-  fontsize: 16px;
+  color: ${theme.colors.grey};
+  font-size: 13px;
   position: relative;
   bottom: 35px;
-  rigth: 15%;
+  left: 1%;
 `;
 
 export const Logo = styled.Image`
   width: 50px;
   height: 50px;
-  position:relative;
+  position: relative;
   left: 5%;
-  right:5%;
-  top: 37%;
+  right: 5%;
+  top: 33%;
 `;
 
 export const Price = styled.Text`
   position: relative;
-  fontsize: 20px;
-  color: black;
-  left: 75%;
-  bottom: 65%;
+  font-size: 16px;
+  color: ${theme.colors.black};
+  left: 80%;
+  bottom: 55%;
+  font-weight: bold;
 `;
 
-export const Increase = styled.Text`
-  color: green;
+export const Percentage = styled.Text`
+  position: absolute;
+  left: 85%;
+  top: 55%;
+  color:${props => props.Boolean ? theme.colors.green : theme.colors.red};
+  font-size: 12px;
 `;
 
-export const Decrease = styled.Text`
-  color: red;
-`;
-
-export const Arrowup = styled.Image`
-  width: 16px;
-  height: 16px;
-  margin-top: 2px;
-`;
-
-export const Arrowdown = styled.Image`
-  width: 16px;
-  height: 16px;
-  margin-top: 2px;
+export const ArrowPercentage = styled.Image`
+  width: 12px;
+  height: 12px;
+  margin-top: 3px;
 `;
 
 export const Arrow = styled.View`
   position: absolute;
-  left: 80%;
-  top: 55%;
-`;
-
-export const Percentage = styled.View`
-  position: absolute;
-  left: 85%;
+  left: 81%;
   top: 55%;
 `;
