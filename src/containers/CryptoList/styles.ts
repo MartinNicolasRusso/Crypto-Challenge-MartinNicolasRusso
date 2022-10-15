@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../utils/themes/themes';
+import theme from '../../utils/themes';
 
 export const Button = styled.Text`
   color: ${theme.colors.blue};

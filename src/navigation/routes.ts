@@ -1,3 +1,3 @@
 export enum Approutes {
-    HOME = 'HOME'
+  HOME = 'HOME',
 }

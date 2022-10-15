@@ -14,10 +14,6 @@ import {
   Percentage,
 } from '../Crypto/styles';
 
-interface Props {
-  crypto: CryptoTypes;
-}
-
 const Crypto: FC = ({item}: {item: CryptoTypes}) => (
   <CryptoContainer>
     <Logo source={item.image} />
@@ -26,14 +22,14 @@ const Crypto: FC = ({item}: {item: CryptoTypes}) => (
       <Slug>{item.slug}</Slug>
     </NameContainer>
     <Price>${item.price}</Price>
-    {parseInt(item.market_porcentage) > 0 ? (
+    {parseInt(item.market_porcentage, 10) > 0 ? (
       <Percentage Boolean={true}>{item.market_porcentage}%</Percentage>
     ) : (
       <Percentage Boolean={false}>{item.market_porcentage}%</Percentage>
     )}
     <Arrow>
       <ArrowPercentage
-        source={parseInt(item.market_porcentage) < 0 ? ArrowDown : ArrowUp}
+        source={parseInt(item.market_porcentage, 10) < 0 ? ArrowDown : ArrowUp}
       />
     </Arrow>
   </CryptoContainer>

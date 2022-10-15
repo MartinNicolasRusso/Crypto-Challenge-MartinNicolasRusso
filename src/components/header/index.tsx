@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, Title, Photo} from './styles';
-import Profile from '../../assets/Profile.jpg'
+import Profile from '../../assets/Profile.jpg';
 
 const Header = () => (
   <Container>

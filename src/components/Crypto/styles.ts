@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../../utils/themes/themes';
+import theme from '../../utils/themes';
 
 export const CryptoContainer = styled.View`
   height: 100px;
@@ -55,7 +55,7 @@ export const Percentage = styled.Text`
   position: absolute;
   left: 85%;
   top: 55%;
-  color:${props => props.Boolean ? theme.colors.green : theme.colors.red};
+  color: ${props => (props.Boolean ? theme.colors.green : theme.colors.red)};
   font-size: 12px;
 `;
 
