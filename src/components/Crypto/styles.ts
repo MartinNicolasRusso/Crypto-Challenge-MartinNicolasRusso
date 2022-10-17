@@ -56,7 +56,7 @@ export const PercentageChangeLast24hrs = styled.Text`
   left: 85%;
   top: 55%;
   color: ${props =>
-    props.PercentageChange ? theme.colors.green : theme.colors.red};
+    props.PositiveChange ? theme.colors.green : theme.colors.red};
   font-size: 12px;
 `;
 
