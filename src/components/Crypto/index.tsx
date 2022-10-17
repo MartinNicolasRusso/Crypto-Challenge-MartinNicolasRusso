@@ -23,7 +23,7 @@ const Crypto: FC = ({item}: {item: CryptoTypes}) => (
     </NameContainer>
     <Price>${item.price}</Price>
     <PercentageChangeLast24hrs
-      Boolean={parseInt(item.market_porcentage, 10) > 0}>
+      PercentageChange={parseInt(item.market_porcentage, 10) > 0}>
       {item.market_porcentage}%
     </PercentageChangeLast24hrs>
     <Arrow>
