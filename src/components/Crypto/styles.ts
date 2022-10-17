@@ -51,7 +51,7 @@ export const Price = styled.Text`
   font-weight: bold;
 `;
 
-export const Percentage = styled.Text`
+export const PercentageChangeLast24hrs = styled.Text`
   position: absolute;
   left: 85%;
   top: 55%;

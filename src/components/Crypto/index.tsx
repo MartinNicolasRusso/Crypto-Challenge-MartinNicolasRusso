@@ -11,7 +11,7 @@ import {
   Slug,
   Arrow,
   ArrowPercentage,
-  Percentage,
+  PercentageChangeLast24hrs,
 } from '../Crypto/styles';
 
 const Crypto: FC = ({item}: {item: CryptoTypes}) => (
@@ -22,11 +22,10 @@ const Crypto: FC = ({item}: {item: CryptoTypes}) => (
       <Slug>{item.slug}</Slug>
     </NameContainer>
     <Price>${item.price}</Price>
-    {parseInt(item.market_porcentage, 10) > 0 ? (
-      <Percentage Boolean={true}>{item.market_porcentage}%</Percentage>
-    ) : (
-      <Percentage Boolean={false}>{item.market_porcentage}%</Percentage>
-    )}
+    <PercentageChangeLast24hrs
+      Boolean={parseInt(item.market_porcentage, 10) > 0}>
+      {item.market_porcentage}%
+    </PercentageChangeLast24hrs>
     <Arrow>
       <ArrowPercentage
         source={parseInt(item.market_porcentage, 10) < 0 ? ArrowDown : ArrowUp}

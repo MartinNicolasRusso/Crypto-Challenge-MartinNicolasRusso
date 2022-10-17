@@ -10,7 +10,7 @@ const CryptoList = () => {
     <SafeAreaView>
       <FlatList
         data={ApiCryptos}
-        keyExtractor={item => item.id}
+        keyExtractor={({id}) => id}
         renderItem={renderItem}
       />
       <Button>+ Add Cryptocurrency</Button>
