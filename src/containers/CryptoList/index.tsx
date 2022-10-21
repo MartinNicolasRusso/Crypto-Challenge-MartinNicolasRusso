@@ -4,16 +4,16 @@ import Crypto from '../../components/Crypto';
 import {Button} from './styles';
 
 const CryptoList = () => {
-  const [coins, setCoins] = useState([]);
-  const cryptos = async () => {
+  const [coins, setCoins] = useState<string[]>([]);
+  const loadCryptosData = async () => {
     const res = await fetch(
-      'https://data.messari.io/api/v2/assets?fields=id,name,slug,symbol,metrics/market_data',
+      `https://data.messari.io/api/v2/assets?fields=id,name,slug,symbol,metrics/market_data`,
     );
     const data = await res.json();
     setCoins(data.data);
   };
   useEffect(() => {
-    cryptos();
+    loadCryptosData();
   }, []);
 
   const renderItem = ({item}) => <Crypto item={item} />;
