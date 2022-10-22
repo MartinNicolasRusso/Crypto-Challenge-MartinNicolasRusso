@@ -16,19 +16,29 @@ import {
 
 const Crypto: FC = ({item}: {item: CryptoTypes}) => (
   <CryptoContainer>
-    <Logo source={item.image} />
+    <Logo
+      source={{
+        uri: `https://messari.io/asset-images/${item.id}/128.png`,
+      }}
+    />
     <NameContainer>
       <Name>{item.name}</Name>
-      <Slug>{item.slug}</Slug>
+      <Slug>{item.symbol}</Slug>
     </NameContainer>
-    <Price>${item.price}</Price>
+    <Price>${item.metrics.market_data.price_usd.toFixed(2)}</Price>
     <PercentageChangeLast24hrs
-      PositiveChange={parseInt(item.market_porcentage, 10) > 0}>
-      {item.market_porcentage}%
+      PositiveChange={
+        item.metrics.market_data.percent_change_usd_last_24_hours > 0
+      }>
+      {item.metrics.market_data.percent_change_usd_last_24_hours.toFixed(2)}%
     </PercentageChangeLast24hrs>
     <Arrow>
       <ArrowPercentage
-        source={parseInt(item.market_porcentage, 10) < 0 ? ArrowDown : ArrowUp}
+        source={
+          item.metrics.market_data.percent_change_usd_last_24_hours < 0
+            ? ArrowDown
+            : ArrowUp
+        }
       />
     </Arrow>
   </CryptoContainer>
