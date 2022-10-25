@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from '../../utils/themes';
 
-export const CryptoContainer = styled.View`
+export const CryptoContainer = styled.TouchableOpacity`
   height: 100px;
   width: 85%;
   left: 7%;
@@ -46,18 +46,19 @@ export const Price = styled.Text`
   position: relative;
   font-size: 16px;
   color: ${theme.colors.black};
-  left: 80%;
   bottom: 55%;
   font-weight: bold;
+  textAlign: right;
 `;
 
 export const PercentageChangeLast24hrs = styled.Text`
   position: absolute;
-  left: 85%;
+  left: 90%;
   top: 55%;
   color: ${props =>
     props.PositiveChange ? theme.colors.green : theme.colors.red};
   font-size: 12px;
+  textAlign: right;
 `;
 
 export const ArrowPercentage = styled.Image`
@@ -68,6 +69,6 @@ export const ArrowPercentage = styled.Image`
 
 export const Arrow = styled.View`
   position: absolute;
-  left: 81%;
+  left: 86%;
   top: 55%;
 `;

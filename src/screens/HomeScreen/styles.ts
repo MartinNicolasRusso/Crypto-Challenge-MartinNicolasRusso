@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import theme from '../../utils/themes';
 
-export const Button = styled.Text`
+export const Button = styled.TouchableOpacity`
   color: ${theme.colors.blue};
-  font-size: 17px;
   left: 30%;
+  bottom: auto;
 `;
