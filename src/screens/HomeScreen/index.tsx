@@ -1,7 +1,7 @@
 import React from 'react';
 import Crypto from '../../components/Crypto';
-import {FlatList, Text, SafeAreaView} from 'react-native';
-import {Button} from '../HomeScreen/styles';
+import {FlatList, SafeAreaView} from 'react-native';
+import {Button, TextAddCrypto} from '../HomeScreen/styles';
 import {useSelector} from 'react-redux';
 
 const Home = ({navigation}) => {
@@ -16,7 +16,7 @@ const Home = ({navigation}) => {
         renderItem={renderItem}
       />
       <Button onPress={() => navigation.navigate('AddCrypto')}>
-        <Text>+ Add New Crypto Currency</Text>
+        <TextAddCrypto>+ Add New Crypto Currency</TextAddCrypto>
       </Button>
     </SafeAreaView>
   );

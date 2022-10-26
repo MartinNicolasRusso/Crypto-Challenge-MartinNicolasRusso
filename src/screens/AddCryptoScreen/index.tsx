@@ -6,6 +6,7 @@ import {
   ContainerScreen,
   ButtonAdd,
   AddText,
+  BackText,
   Title,
 } from './styles';
 import theme from '../../utils/themes';
@@ -24,8 +25,8 @@ const AddNewCrypto = ({navigation}) => {
   };
   return (
     <ContainerScreen>
-      <Button onPress={() => navigation.goBack()}>
-        <Text>Back to list</Text>
+      <Button onPress={navigation.goBack}>
+        <BackText>&lt; Back to list</BackText>
       </Button>
       <Title>Add a Cryptocurrency</Title>
       <Input
@@ -34,8 +35,8 @@ const AddNewCrypto = ({navigation}) => {
         borderColor={input ? theme.colors.yellow : theme.colors.grey}
         value={input}
       />
-      <ButtonAdd onPress={() => HandleSearch()} disabled={input.length === 0}>
-        <AddText>Add</AddText>
+      <ButtonAdd onPress={HandleSearch} disabled={input.length === 0}>
+        <AddText ColorAddText={input.length > 0}>Add</AddText>
       </ButtonAdd>
     </ContainerScreen>
   );

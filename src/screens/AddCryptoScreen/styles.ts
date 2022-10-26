@@ -21,12 +21,20 @@ export const ButtonAdd = styled.TouchableOpacity`
   top: 25%;
 `;
 
+export const BackText = styled.Text`
+color: ${theme.colors.blue};
+font-size: 15px;
+`;
+
 export const AddText = styled.Text`
   font-weight: bold;
+  color: ${props =>
+    props.ColorAddText ? theme.colors.black : theme.colors.lightgrey};
 `;
 
 export const Button = styled.TouchableOpacity`
   left: 10%;
+  color: ${theme.colors.blue}
   bottom: 25%;
 `;
 export const Input = styled.TextInput`
