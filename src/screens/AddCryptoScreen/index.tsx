@@ -15,7 +15,7 @@ import {addNewCrypto} from '../../store/actions';
 
 const AddNewCrypto = ({navigation}) => {
   const cryptos = useSelector(state => state.cryptos);
-  const [input, setInput] = useState<string>('');
+  const [input, setInput] = useState('');
   const dispatch = useDispatch();
 
   const HandleSearch = () => {
