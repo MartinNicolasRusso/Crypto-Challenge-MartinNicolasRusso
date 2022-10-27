@@ -1,63 +1,57 @@
 import styled from 'styled-components';
 import theme from '../../utils/themes';
 
-export const CryptoContainer = styled.View`
-  height: 100px;
-  width: 85%;
-  left: 7%;
-  margin-bottom: 10px;
+export const CryptoContainer = styled.TouchableOpacity`
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin: 0px 28px;
+  padding: 18px 0px;
   border-bottom-color: ${theme.colors.lightgrey};
   border-bottom-width: 1px;
 `;
 
 export const NameContainer = styled.View`
-  width: 25%;
-  position: relative;
-  left: 22%;
-  top: 20%;
+  flex-direction: column;
+  justify-content: flex-start;
 `;
 
 export const Name = styled.Text`
   color: ${theme.colors.black};
   font-size: 16px;
-  position: relative;
-  bottom: 35px;
   font-weight: bold;
+  text-align: right;
 `;
 
 export const Slug = styled.Text`
   color: ${theme.colors.grey};
   font-size: 13px;
-  position: relative;
-  bottom: 35px;
-  left: 1%;
+`;
+
+export const PricesContainer = styled.View`
+  flex-direction: column;
 `;
 
 export const Logo = styled.Image`
   width: 50px;
   height: 50px;
-  position: relative;
-  left: 5%;
-  right: 5%;
-  top: 33%;
+  margin-right: 7px;
 `;
 
 export const Price = styled.Text`
-  position: relative;
   font-size: 16px;
   color: ${theme.colors.black};
-  left: 80%;
   bottom: 55%;
   font-weight: bold;
+  text-lign: left;
+  top: 5%;
 `;
 
 export const PercentageChangeLast24hrs = styled.Text`
-  position: absolute;
-  left: 85%;
-  top: 55%;
   color: ${props =>
     props.PositiveChange ? theme.colors.green : theme.colors.red};
   font-size: 12px;
+  text-align: right;
 `;
 
 export const ArrowPercentage = styled.Image`
@@ -67,7 +61,12 @@ export const ArrowPercentage = styled.Image`
 `;
 
 export const Arrow = styled.View`
-  position: absolute;
-  left: 81%;
-  top: 55%;
+flex-direction: row;
+display:flex;
+align-items: center;
 `;
+
+export const LogoNameContainer =  styled.View`
+flex-direction: row;
+align-items: center;
+`
