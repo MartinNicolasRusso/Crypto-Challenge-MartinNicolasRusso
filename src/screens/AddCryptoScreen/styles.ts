@@ -22,8 +22,8 @@ export const ButtonAdd = styled.TouchableOpacity`
 `;
 
 export const BackText = styled.Text`
-color: ${theme.colors.blue};
-font-size: 15px;
+  color: ${theme.colors.blue};
+  font-size: 15px;
 `;
 
 export const AddText = styled.Text`

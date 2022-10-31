@@ -61,12 +61,12 @@ export const ArrowPercentage = styled.Image`
 `;
 
 export const Arrow = styled.View`
-flex-direction: row;
-display:flex;
-align-items: center;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
 `;
 
-export const LogoNameContainer =  styled.View`
-flex-direction: row;
-align-items: center;
-`
+export const LogoNameContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;

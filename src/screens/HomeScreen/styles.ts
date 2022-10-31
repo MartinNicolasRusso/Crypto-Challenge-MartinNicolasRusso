@@ -7,5 +7,5 @@ export const Button = styled.TouchableOpacity`
 `;
 
 export const TextAddCrypto = styled.Text`
-color: ${theme.colors.blue};
-`
+  color: ${theme.colors.blue};
+`;
