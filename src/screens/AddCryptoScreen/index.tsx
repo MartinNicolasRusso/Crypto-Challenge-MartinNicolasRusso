@@ -11,6 +11,7 @@ import {
 import theme from '../../utils/themes';
 import {useDispatch, useSelector} from 'react-redux';
 import {addNewCrypto} from '../../store/actions';
+import { StatusBar } from 'react-native';
 
 const AddNewCrypto = ({navigation}) => {
   const cryptos = useSelector(state => state.cryptos);
@@ -24,6 +25,7 @@ const AddNewCrypto = ({navigation}) => {
   };
   return (
     <ContainerScreen>
+      <StatusBar backgroundColor={theme.colors.whiteInput}/>
       <Button onPress={navigation.goBack}>
         <BackText>&lt; Back to list</BackText>
       </Button>
