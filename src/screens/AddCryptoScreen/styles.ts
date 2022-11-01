@@ -30,7 +30,7 @@ export const AddText = styled.Text`
   font-size: 20px;
   font-weight: bold;
   color: ${props =>
-    props.ColorAddText ? theme.colors.black : theme.colors.lightgrey};
+    props.ColorAddText ? theme.colors.black : theme.colors.addButomGrey};
 `;
 
 export const Button = styled.TouchableOpacity`

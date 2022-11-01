@@ -27,7 +27,7 @@ const Home = ({navigation}) => {
         renderItem={renderItem}
       />
       <Button onPress={() => navigation.navigate('AddCrypto')}>
-        <TextAddCrypto>+ Add New Crypto Currency</TextAddCrypto>
+        <TextAddCrypto>+ Add New CryptoCurrency</TextAddCrypto>
       </Button>
     </SafeAreaView>
   );
