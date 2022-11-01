@@ -19,6 +19,7 @@ const StackNavigation = () => (
         headerTintColor: `${theme.colors.white}`,
         headerTitleStyle: {
           fontWeight: 'bold',
+          fontSize: 25,
         },
       }}>
       <Stack.Screen

@@ -61,7 +61,7 @@ export const updateCryptos = () => {
       );
       const data = await res.json();
       const newList: CryptoTypes[] = data.data.map(item => {
-        const coins: CryptoTypes = {
+        return {
           id: item.id,
           name: item.name,
           symbol: item.symbol,
@@ -71,11 +71,9 @@ export const updateCryptos = () => {
               item.metrics.market_data.percent_change_usd_last_24_hours,
           },
         };
-        return coins;
       });
       const updatedCurrenciesList: CryptoTypes[] = cryptos.map(cryp => {
-        const result = newList.filter(item => item.id === cryp.id)[0];
-        return result;
+        return newList.filter(item => item.id === cryp.id)[0];
       });
       dispatch({
         type: UPDATE_CRYPTOS,
