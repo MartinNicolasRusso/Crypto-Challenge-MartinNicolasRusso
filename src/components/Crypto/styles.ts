@@ -8,7 +8,7 @@ export const CryptoContainer = styled.TouchableOpacity`
   margin: 0px 28px;
   padding: 18px 0px;
   border-bottom-color: ${theme.colors.lightgrey};
-  border-bottom-width: 1px;
+  border-bottom-width: 0.5px;
 `;
 
 export const NameContainer = styled.View`

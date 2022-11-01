@@ -12,21 +12,30 @@ export const addNewCrypto = (symbol: string, cryptos: CryptoTypes[]) => {
       const res = await fetch(
         `https://data.messari.io/api/v1/assets/${symbol}/metrics`,
       );
-      const data = await res.json();
-      const alreadyExist = cryptos.cryptos.filter(
-        currency => currency.id === data.data.id,
-      );
-      if (alreadyExist.length > 0) {
+      if (res.ok) {
+        const data = await res.json();
+        const alreadyExist = cryptos.cryptos.filter(
+          currency => currency.id === data.data.id,
+        );
+        if (alreadyExist.length > 0) {
+          throw new Error(
+            `${Alert.alert(
+              'This Crypto Currency is already in your list! Try another one.',
+            )}`,
+          );
+        } else {
+          dispatch({
+            type: ADD_CRYPTO,
+            payload: data.data,
+          });
+        }
+      } else {
         throw new Error(
           `${Alert.alert(
-            'This Crypto Currency is already in your list! Try another one.',
+            'This Crypto Currency doesnt exist! Try another one.',
           )}`,
         );
       }
-      dispatch({
-        type: ADD_CRYPTO,
-        payload: data.data,
-      });
     } catch (error) {
       console.log(error);
     }

@@ -8,6 +8,7 @@ const theme = {
     green: '#009200',
     yellow: '#F3CF3C',
     lightgrey: '#9C978C',
+    whiteInput: '#EEEEEE',
   },
 };
 export default theme;

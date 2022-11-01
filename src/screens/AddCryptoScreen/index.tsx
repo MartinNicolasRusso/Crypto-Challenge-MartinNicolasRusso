@@ -30,8 +30,9 @@ const AddNewCrypto = ({navigation}) => {
       <Title>Add a Cryptocurrency</Title>
       <Input
         placeholder="Use a name or ticker symbol"
+        placeholderTextColor={theme.colors.lightgrey}
         onChangeText={setInput}
-        borderColor={input ? theme.colors.yellow : theme.colors.grey}
+        borderColor={input ? theme.colors.yellow : theme.colors.lightgrey}
         value={input}
       />
       <ButtonAdd onPress={HandleSearch} disabled={input.length === 0}>
