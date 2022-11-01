@@ -1,9 +1,10 @@
 import React, {useEffect} from 'react';
 import Crypto from '../../components/Crypto';
-import {FlatList, SafeAreaView} from 'react-native';
+import {FlatList, SafeAreaView, StatusBar} from 'react-native';
 import {Button, TextAddCrypto} from '../HomeScreen/styles';
 import {useDispatch, useSelector} from 'react-redux';
 import {updateCryptos} from '../../store/actions';
+import theme from '../../utils/themes';
 
 const Home = ({navigation}) => {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const Home = ({navigation}) => {
 
   return (
     <SafeAreaView>
+      <StatusBar backgroundColor={theme.colors.blue}/>
       <FlatList
         data={cryptos.cryptos}
         keyExtractor={item => item.id}
