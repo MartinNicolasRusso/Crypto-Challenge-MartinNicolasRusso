@@ -14,7 +14,7 @@ const Home = ({navigation}) => {
   const handleUpdate = () => {
     dispatch(updateCryptos());
   };
-
+  
   useEffect(() => {
     const interval = setInterval(() => handleUpdate(), 6000);
     return () => clearInterval(interval);

@@ -14,7 +14,6 @@ export const addNewCrypto = (symbol: string, cryptos: CryptoTypes[]) => {
       );
       if (res.ok) {
         const {data} = await res.json();
-        console.log(data);
         const alreadyExist = cryptos.cryptos.filter(({id}) => id === data.id);
         if (alreadyExist.length > 0) {
           throw new Error(
@@ -71,9 +70,8 @@ export const updateCryptos = () => {
           },
         };
       });
-      const updatedCurrenciesList: CryptoTypes[] = cryptos.map(cryp => {
-        newList.filter(item => item.id === cryp.id)[0];
-      });
+      const updatedCurrenciesList: CryptoTypes[] = cryptos.map(
+        (cryp: CryptoTypes) => newList.filter(item => item.id === cryp.id)[0],);
       dispatch({
         type: UPDATE_CRYPTOS,
         payload: updatedCurrenciesList,
