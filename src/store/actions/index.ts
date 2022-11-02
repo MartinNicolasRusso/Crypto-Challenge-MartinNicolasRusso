@@ -13,10 +13,9 @@ export const addNewCrypto = (symbol: string, cryptos: CryptoTypes[]) => {
         `https://data.messari.io/api/v1/assets/${symbol}/metrics`,
       );
       if (res.ok) {
-        const data = await res.json();
-        const alreadyExist = cryptos.cryptos.filter(
-          currency => currency.id === data.data.id,
-        );
+        const {data} = await res.json();
+        console.log(data);
+        const alreadyExist = cryptos.cryptos.filter(({id}) => id === data.id);
         if (alreadyExist.length > 0) {
           throw new Error(
             `${Alert.alert(
@@ -26,7 +25,7 @@ export const addNewCrypto = (symbol: string, cryptos: CryptoTypes[]) => {
         } else {
           dispatch({
             type: ADD_CRYPTO,
-            payload: data.data,
+            payload: data,
           });
         }
       } else {
@@ -73,7 +72,7 @@ export const updateCryptos = () => {
         };
       });
       const updatedCurrenciesList: CryptoTypes[] = cryptos.map(cryp => {
-        return newList.filter(item => item.id === cryp.id)[0];
+        newList.filter(item => item.id === cryp.id)[0];
       });
       dispatch({
         type: UPDATE_CRYPTOS,
