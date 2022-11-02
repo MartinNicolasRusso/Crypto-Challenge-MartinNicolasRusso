@@ -71,7 +71,8 @@ export const updateCryptos = () => {
         };
       });
       const updatedCurrenciesList: CryptoTypes[] = cryptos.map(
-        (cryp: CryptoTypes) => newList.filter(item => item.id === cryp.id)[0],);
+        (cryp: CryptoTypes) => newList.filter(item => item.id === cryp.id)[0],
+      );
       dispatch({
         type: UPDATE_CRYPTOS,
         payload: updatedCurrenciesList,
