@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {Alert} from 'react-native';
 import {CryptoTypes} from '../../types';
 import ArrowDown from '../../assets/ArrowDown.png';

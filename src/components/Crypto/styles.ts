@@ -8,7 +8,7 @@ export const CryptoContainer = styled.TouchableOpacity`
   margin: 0px 28px;
   padding: 18px 0px;
   border-bottom-color: ${theme.colors.lightgrey};
-  border-bottom-width: 1px;
+  border-bottom-width: 0.5px;
 `;
 
 export const NameContainer = styled.View`
@@ -61,12 +61,12 @@ export const ArrowPercentage = styled.Image`
 `;
 
 export const Arrow = styled.View`
-flex-direction: row;
-display:flex;
-align-items: center;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
 `;
 
-export const LogoNameContainer =  styled.View`
-flex-direction: row;
-align-items: center;
-`
+export const LogoNameContainer = styled.View`
+  flex-direction: row;
+  align-items: center;
+`;
